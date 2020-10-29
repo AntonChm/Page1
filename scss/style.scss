@@ -81,6 +81,7 @@ header {
 	min-height: 800px;	
 	max-width: 1110px;
 	margin: auto;	
+	padding: 0 10px;
 }
 
 .first-screen__box {
@@ -111,15 +112,14 @@ header {
 	text-align: center;
 }
 
-.services {		
-	// min-height: 800px;	
+.services {				
 	max-width: 1110px;
 	margin: auto;	
 	display: flex;	
 	flex-direction: column;
 	align-items: center;
 	margin-top: 100px;	
-	padding: 0;
+	padding: 0 10px;
 
 	.services__heading {
 		margin-top: 0;
@@ -129,16 +129,15 @@ header {
 		font-size: 36px;
 		margin-bottom: 0;
 		color: #323232;
-	}
-
-	p {color: #999999;}
+	}	
 
 	.services__info {
 		max-width: 740px;
 		text-align: center;
 		margin-top: 50px;
 		font-size: 16px;
-		margin-bottom: 0;		
+		margin-bottom: 0;
+		color: #999999;		
 	}
 
 	.button {margin-top: 55px;}
@@ -151,6 +150,7 @@ header {
 	list-style: none;
 	justify-content: space-between;
 	margin-bottom: 0;
+	padding: 0;
 }
 
 .services__item {
@@ -191,8 +191,10 @@ header {
 
 .about-us {
 	max-width: 1110px;
+	padding: 10px;
 	margin: auto;	
 	border-bottom: 1px solid #E0E0E0;
+	padding: 0 10px;
 }
 
 .about-us__wrap {
@@ -204,7 +206,7 @@ header {
 .about-us__content-wrap,
 .about-us__wrap img {
 	width: 45%;
-	min-width: 320px;
+	min-width: 260px;	
 }
 
 .about-us__wrap img { object-fit: cover;}
