@@ -10,7 +10,13 @@
 }
 
 * {font-family: 'Montserrat', sans-serif; }
-a {text-decoration: none;}
+
+a {
+	text-decoration: underline;
+	color: #4985FF;
+	font-size: 16px;
+	font-family: 500;
+}
 
 body {margin: 0;}
   
@@ -68,7 +74,7 @@ header {
 	z-index: -1;
 	left: 0px; 
 	bottom: 0px; 
-	background-image: url(../img/first-scree-bg.jpg);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/first-scree-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: cover;		
@@ -107,10 +113,10 @@ header {
 	height: 45px;
 	border-radius: 30px;
 	background-color: #4985FF;	
-	line-height: 45px;
-	font-size: 16px;
+	line-height: 45px;	
 	color: #FFF;	
 	text-align: center;
+	text-decoration: none;
 }
 
 .services {				
@@ -120,7 +126,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	margin-top: 100px;	
-	padding: 0 10px 105px 0;
+	padding: 10px 10px 105px 10px;
 
 	.services__heading {
 		margin-top: 0;
@@ -159,6 +165,8 @@ header {
 	display: flex;
 	justify-content: space-between;
 	max-width: 353px;
+
+	// TODO: сделать на всю ширину в мешиа, при маленьком экране
 }
 
 .services__item-circle-1 {
@@ -198,23 +206,19 @@ header {
 	}
 }
 
-.about-us__bg {
+.about-us {
 	background-color: #F6F6F8;
 	width: 100%;
 }
 
-.about-us {
+.about-us__wrapper {
 	max-width: 1110px;	
-	margin: auto;	
-	border-bottom: 1px solid #E0E0E0;
-	padding: 100px 10px 70px;
-	// background-color: #F6F6F8;
-	position: relative;
-
-	
+	margin: auto;		
+	padding: 100px 10px 70px;	
+	position: relative;	
 }
 
-.about-us__wrap {
+.about-us__description-wrap {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -223,14 +227,16 @@ header {
 }
 
 .about-us__content-wrap,
-.about-us__wrap img {
+.about-us__description-wrap img {
 	position: relative;
 	width: 45%;
-	min-width: 260px;		
+	min-width: 260px;	
+	
+	// TODO: В медия исправить, что-бы занимали всю ширину на маленьком
 }
 
 .about-us__content-wrap {
-	padding-top: 50px;	
+	padding: 50px 0 30px 0;	
 
 	h2 {color: #323232;}
 
@@ -239,27 +245,23 @@ header {
 		color: #999999;
 		font-weight: 400;
 	}
-
-	a {
-		text-decoration: underline;
-		color: #4985FF;
-		font-size: 16px;
-		font-family: 500;
-	}
 }
 
-.about-us__wrap img { 	
+.about-us__description-wrap img { 	
 	object-fit: contain;
 	border-radius: 30px;
 }
 
 .about-us__exemples {
 	display: flex;
-	max-width: 920px;
-	margin: 70px auto;
+	flex-wrap: wrap;
+	max-width: 920px;	
+	margin: 50px auto;
 	list-style: none;	
 	padding: 0;
 	justify-content: space-between;
+
+	li {padding: 20px;}
 
 	li>p {
 		font-weight: 400;
@@ -268,16 +270,12 @@ header {
 		margin: 17px 0 0 0;
 		text-align: center;
 	}
-
-	
 }
 
 .about-us__exemples-item-wrap {
 	display: flex;
 	justify-content: space-between;
-
-	
-
+		
 	p {
 		font-weight: 400;
 		font-size: 36px;
@@ -288,7 +286,135 @@ header {
 	img {
 		width: 30px;
 		object-fit: contain;
+	}	
+}
+
+.all-services {	
+	position: relative;
+	
+
+
+	&::before {
+		content: ''; 
+		position: absolute; 
+		width: 100%;
+		height: 50%;
+		// TODO: на маленьком єкране сделать 15% высоты для планшетов 10% для мобильных 
+		background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+		z-index: -1;				 
+	}	
+}
+
+.all-services__wrapper {
+	max-width: 1110px;	
+	margin: auto;	
+	margin-bottom: 85px;	
+	padding: 100px 10px 85px;
+	border-bottom: 1px solid #E0E0E0;			
+}
+
+.all-services__head-wrapp {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	h2 {
+		margin: 0;
+		color: #fff;
+		font-weight: 700;
+		font-size: 36px;
+		max-width: 540px;
+	}
+	// TODO: В медиа исправить, что бы кнопка становилась по центру на .about-us__content-wrap
+}
+
+.all-services__items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.all-services__item {
+	max-width: 350px;
+	margin-top: 70px;
+	// TODO: Для планшетов сделать space-around, для модильных - 100% ширины;
+
+
+
+	&:nth-child(2) {
+		margin-left: 30px;
+		margin-right: 30px;
 	}
 
-	
+	img {		
+		border-radius: 10px;
+		display: block;
+		height: 300px;
+		width: 350px;
+		background-color: #C4C4C4;
+	}
+
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		margin: 30px 0 0 0;
+
+		span {color: #4985FF;}
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 25px;		
+		color: #999999;
+		margin-top: 30px 0;
+	}
+}
+
+.all-projects {
+	background-color: #F6F6F8;
+}
+
+.all-projects__wrapper {
+	max-width: 1110px;	
+	margin: auto;			
+	padding: 100px 10px 130px;
+	text-align: center;
+
+	h2 {
+		margin: 0;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 53px;
+		text-align: center;
+	}
+
+	p {
+		max-width: 730px;
+		margin: 50px auto 55px;
+		text-align: center;
+		color: #999999;
+		font-weight: 400;
+		font-size: 16px;
+	}
+
+	.button {margin: 35px auto 0;}
+}
+
+.all-projects__gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	img {		
+		width: 255px;
+		height: 255px;	
+		margin: 10px;
+		border-radius: 10px;		
+		background-color: #C4C4C4;
+		}
+
 }
