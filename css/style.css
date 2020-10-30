@@ -107,7 +107,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  padding: 0 10px; }
+  padding: 0 10px 105px 0; }
   .services .services__heading {
     margin-top: 0;
     font-weight: 700;
@@ -121,6 +121,7 @@ header {
     text-align: center;
     margin-top: 50px;
     font-size: 16px;
+    font-weight: 400;
     margin-bottom: 0;
     color: #999999; }
   .services .button {
@@ -163,24 +164,77 @@ header {
   margin-left: 10px; }
   .services__item-content-wrap h3 {
     font-size: 18px;
-    color: #000; }
+    color: #000;
+    font-weight: 600; }
+  .services__item-content-wrap p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999; }
+
+.about-us__bg {
+  background-color: #F6F6F8;
+  width: 100%; }
 
 .about-us {
   max-width: 1110px;
-  padding: 10px;
   margin: auto;
   border-bottom: 1px solid #E0E0E0;
-  padding: 0 10px; }
+  padding: 100px 10px 70px;
+  position: relative; }
 
 .about-us__wrap {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 90px; }
 
 .about-us__content-wrap,
 .about-us__wrap img {
+  position: relative;
   width: 45%;
   min-width: 260px; }
 
+.about-us__content-wrap {
+  padding-top: 50px; }
+  .about-us__content-wrap h2 {
+    color: #323232; }
+  .about-us__content-wrap p {
+    margin: 40px 0 30px 0;
+    color: #999999;
+    font-weight: 400; }
+  .about-us__content-wrap a {
+    text-decoration: underline;
+    color: #4985FF;
+    font-size: 16px;
+    font-family: 500; }
+
 .about-us__wrap img {
-  object-fit: cover; }
+  object-fit: contain;
+  border-radius: 30px; }
+
+.about-us__exemples {
+  display: flex;
+  max-width: 920px;
+  margin: 70px auto;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between; }
+  .about-us__exemples li > p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #999999;
+    margin: 17px 0 0 0;
+    text-align: center; }
+
+.about-us__exemples-item-wrap {
+  display: flex;
+  justify-content: space-between; }
+  .about-us__exemples-item-wrap p {
+    font-weight: 400;
+    font-size: 36px;
+    color: #000;
+    margin: 0 0 0 20px; }
+  .about-us__exemples-item-wrap img {
+    width: 30px;
+    object-fit: contain; }

@@ -60,7 +60,8 @@ header {
 	position: relative;
 	color: #fff;
 
-	&::after {content: ''; 
+	&::after {
+	content: ''; 
 	position: absolute; 
 	width: 100%;
 	height: 900px;
@@ -119,7 +120,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	margin-top: 100px;	
-	padding: 0 10px;
+	padding: 0 10px 105px 0;
 
 	.services__heading {
 		margin-top: 0;
@@ -136,6 +137,7 @@ header {
 		text-align: center;
 		margin-top: 50px;
 		font-size: 16px;
+		font-weight: 400;
 		margin-bottom: 0;
 		color: #999999;		
 	}
@@ -186,27 +188,107 @@ header {
 	h3 {
 		font-size: 18px;
 		color:#000;
+		font-weight: 600;
+	}
+
+	p {
+		font-size: 14px;
+		font-weight: 400;
+		color: #999999;
 	}
 }
 
+.about-us__bg {
+	background-color: #F6F6F8;
+	width: 100%;
+}
+
 .about-us {
-	max-width: 1110px;
-	padding: 10px;
+	max-width: 1110px;	
 	margin: auto;	
 	border-bottom: 1px solid #E0E0E0;
-	padding: 0 10px;
+	padding: 100px 10px 70px;
+	// background-color: #F6F6F8;
+	position: relative;
+
+	
 }
 
 .about-us__wrap {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	border-bottom: 1px solid #E0E0E0;
+	padding-bottom: 90px;
 }
 
 .about-us__content-wrap,
 .about-us__wrap img {
+	position: relative;
 	width: 45%;
-	min-width: 260px;	
+	min-width: 260px;		
 }
 
-.about-us__wrap img { object-fit: cover;}
+.about-us__content-wrap {
+	padding-top: 50px;	
+
+	h2 {color: #323232;}
+
+	p {
+		margin: 40px 0 30px 0;
+		color: #999999;
+		font-weight: 400;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #4985FF;
+		font-size: 16px;
+		font-family: 500;
+	}
+}
+
+.about-us__wrap img { 	
+	object-fit: contain;
+	border-radius: 30px;
+}
+
+.about-us__exemples {
+	display: flex;
+	max-width: 920px;
+	margin: 70px auto;
+	list-style: none;	
+	padding: 0;
+	justify-content: space-between;
+
+	li>p {
+		font-weight: 400;
+		font-size: 14px;
+		color: #999999;
+		margin: 17px 0 0 0;
+		text-align: center;
+	}
+
+	
+}
+
+.about-us__exemples-item-wrap {
+	display: flex;
+	justify-content: space-between;
+
+	
+
+	p {
+		font-weight: 400;
+		font-size: 36px;
+		color: #000;
+		margin: 0 0 0 20px;
+	}
+
+	img {
+		width: 30px;
+		object-fit: contain;
+	}
+
+	
+}
